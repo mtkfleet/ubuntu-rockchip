@@ -48,7 +48,7 @@ env:
 jobs:
 
   Build:
-    runs-on: self-hosted
+    runs-on: ubuntu-20.04
     timeout-minutes: 1440
     steps:
       
