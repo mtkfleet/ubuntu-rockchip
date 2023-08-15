@@ -337,6 +337,10 @@ cp ${overlay_dir}/etc/gdm3/custom.conf ${chroot_dir}/etc/gdm3/custom.conf
 mkdir -p ${chroot_dir}/usr/lib/chromium-browser
 cp ${overlay_dir}/usr/lib/chromium-browser/initial_preferences ${chroot_dir}/usr/lib/chromium-browser/initial_preferences
 
+# add mediatek firmware
+mkdir -p ${chroot_dir}/usr/lib/firmware/mediatek
+cp -rpf ${overlay_dir}/usr/lib/firmware/mediatek/*.bin ${chroot_dir}/usr/lib/firmware/mediatek
+
 # Set chromium default launch args
 mkdir -p ${chroot_dir}/usr/lib/chromium-browser
 cp ${overlay_dir}/etc/chromium-browser/default ${chroot_dir}/etc/chromium-browser/default
