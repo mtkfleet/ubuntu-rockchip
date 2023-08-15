@@ -343,7 +343,7 @@ cp -rpf ${overlay_dir}/usr/lib/firmware/mediatek/*.bin ${chroot_dir}/usr/lib/fir
 
 # default image background
 # mkdir -p ${chroot_dir}/usr/share/backgrounds
-# cp -rpf ${overlay_dir}/warty-final-ubuntu.png /usr/share/backgrounds/warty-final-ubuntu.png
+# cp -rpf ${overlay_dir}/warty-final-ubuntu.png ${chroot_dir}/usr/share/backgrounds/warty-final-ubuntu.png
 
 # Set chromium default launch args
 mkdir -p ${chroot_dir}/usr/lib/chromium-browser
