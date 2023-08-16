@@ -125,7 +125,7 @@ p7zip-full htop iotop pciutils lshw lsof landscape-common exfat-fuse hwinfo \
 net-tools wireless-tools openssh-client openssh-server wpasupplicant ifupdown \
 pigz wget curl lm-sensors bluez gdisk usb-modeswitch usb-modeswitch-data make \
 gcc libc6-dev bison libssl-dev flex flash-kernel fake-hwclock rfkill wireless-regdb \
-mmc-utils
+mmc-utils network-manager
 
 # Remove cryptsetup and needrestart
 apt-get -y remove cryptsetup needrestart
@@ -260,7 +260,7 @@ libdvbv5-0 libdvbv5-dev libdvbv5-doc libv4l-0 libv4l2rds0 libv4lconvert0 libv4l-
 libv4l-rkmpp qv4l2 v4l-utils librockchip-mpp1 librockchip-mpp-dev librockchip-vpu0 \
 rockchip-mpp-demos librga2 librga-dev libegl-mesa0 libegl1-mesa-dev libgbm-dev \
 libgl1-mesa-dev libgles2-mesa-dev libglx-mesa0 mesa-common-dev mesa-vulkan-drivers \
-mesa-utils libwidevinecdm
+mesa-utils libwidevinecdm network-manager
 
 # Remove cloud-init and landscape-common
 apt-get -y purge cloud-init landscape-common
