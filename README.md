@@ -1,44 +1,28 @@
-## Overview
+# 概述
+* 该项目旨在为Rockchip RK3588设备提供默认的Ubuntu 22.04体验。立即开始使用 Ubuntu 服务器或桌面映像以获得熟悉的环境。有关此项目或特定设备的更多信息，请查看Wiki上的文档。
 
-This project aims to provide a default Ubuntu 22.04 experience for Rockchip RK3588 devices. Get started today with an Ubuntu Server or Desktop image for a familiar environment. For additional information about this project or a specific device, please take a look at the documentation available on the [Wiki](https://github.com/Joshua-Riek/ubuntu-rockchip/wiki).
+* 支持的设备正在不断开发。因此，您可能会遇到错误或缺少功能。我将尽力使用最新的更改和修复来更新此项目。如果您发现问题，请在问题或讨论部分报告。
 
-The supported devices are undergoing continuous development. As a result, you may encounter bugs or missing features. I'll do my best to update this project with the most recent changes and fixes. If you find problems, please report them in the issues or discussions section.
+## 强调
+使用官方 Ubuntu 存储库通过 apt 进行包管理
+通过 apt 接收内核、固件和引导加载程序更新
+用于用户设置和配置的桌面首次运行向导
+通过 panfork 提供 3D 视频硬件加速支持
+使用 Wayland 完全运行的 GNOME 桌面
+Chromium 浏览器可流畅播放 4k youtube 视频
+可流畅播放4k视频的MPV视频播放器
+Gstreamer 可用作命令行中的替代 4k 视频播放器
+5.10.110 Linux 内核
 
-## Highlights
+# 安装
+确保您使用优质、可靠且快速的 SD 卡。例如，假设您遇到启动或稳定性问题。大多数情况下，这是由于电源不足或与您的 SD 卡有关（卡坏、读卡器坏、刻录映像时出现问题或卡太慢）。
 
-* Package management via apt using the official Ubuntu repositories
-* Receive kernel, firmware, and bootloader updates through apt
-* Desktop first-run wizard for user setup and configuration
-* 3D video hardware acceleration support via panfork
-* Fully working GNOME desktop using wayland
-* Chromium browser with smooth 4k youtube video playback
-* MPV video player capable of smooth 4k video playback
-* Gstreamer can be used as an alternative 4k video player from the command line
-* 5.10.110 Linux kernel
+从 GitHub 上的最新版本下载适用于您的特定主板的 Ubuntu 映像。然后使用balenaEtcher将 xz 压缩映像写入您的 SD 卡，因为与其他工具不同，它可以验证刻录结果，从而避免 SD 卡内容损坏。
 
-## Supported Boards
+启动系统
+将 SD 卡插入板上的插槽并打开设备电源。首次启动可能需要长达两分钟的时间，因此请耐心等待。
 
-* Orange Pi 5
-* Orange Pi 5B
-* Orange Pi 5 Plus (WIP hardware required)
-* NanoPi R6S
-* NanoPi R6C
-* Rock 5B
-* Rock 5A (WIP hardware required)
-* Indiedroid Nova (WIP)
+# 登录信息
+* 对于服务器映像，您将能够通过 HDMI 或串行控制台连接登录。预定义用户为ubuntu，密码为ubuntu。
 
-## Installation
-
-Make sure you use a good, reliable, and fast SD card. For example, suppose you encounter boot or stability troubles. Most of the time, this is due to either an insufficient power supply or related to your SD card (bad card, bad card reader, something went wrong when burning the image, or the card is too slow).
-
-Download the Ubuntu image for your specific board from the latest [release](https://github.com/Joshua-Riek/ubuntu-rockchip/releases) on GitHub. Then write the xz compressed image to your SD card using [balenaEtcher](https://www.balena.io/etcher) since, unlike other tools, it can validate burning results, saving you from corrupted SD card contents.
-
-## Boot the System
-
-Insert your SD card into the slot on the board and power on the device. The first boot may take up to two minutes, so please be patient.
-
-## Login Information
-
-For the server image you will be able to login through HDMI or a serial console connection. The predefined user is `ubuntu` and the password is `ubuntu`.
-
-For the desktop image you must connect through HDMI and follow the setup-wizard.
+* 对于桌面图像，您必须通过 HDMI 连接并按照设置向导进行操作。
