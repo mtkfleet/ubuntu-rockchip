@@ -23,3 +23,11 @@
 # 登录信息
 * 对于服务器映像，您将能够通过 HDMI 或串行控制台连接登录。预定义用户为ubuntu，密码为ubuntu。
 * 对于桌面图像，您必须通过 HDMI 连接并按照设置向导进行操作。
+
+# 编译
+
+一键编译桌面版和服务版
+`sudo ./build.sh --clean --board=机型`
+
+编译内核
+`dpkg-buildpackage -a "$(cat debian/arch)" -d -b -nc -uc`
