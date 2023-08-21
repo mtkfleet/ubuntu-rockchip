@@ -12,7 +12,7 @@ cd "$(dirname -- "$(readlink -f -- "$0")")" && cd ..
 mkdir -p build && cd build
 
 if [ ! -d linux-rockchip ]; then
-    git clone --single-branch --progress -b linux-5.10-gen-rkr4 --depth=1 https://github.com/DHDAXCW/linux-rockchip linux-rockchip
+    git clone --single-branch --progress -b rkr4.1 --depth=1 https://github.com/DHDAXCW/linux-rockchip linux-rockchip
 fi
 cd linux-rockchip
 
