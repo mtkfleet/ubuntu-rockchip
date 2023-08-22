@@ -10,7 +10,7 @@
        "create_all_shortcuts": true
     },
     "first_run_tabs": [
-       "https://www.google.com"
+       "https://www.baidu.com"
     ],
     "browser": {
        "show_home_button": true,
@@ -26,5 +26,5 @@
     "alternate_error_pages": {
       "enabled": false
     },
-    "homepage": "https://www.google.com"
+    "homepage": "https://www.baidu.com"
 }
