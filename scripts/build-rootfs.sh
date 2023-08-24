@@ -262,6 +262,15 @@ rockchip-mpp-demos librga2 librga-dev libegl-mesa0 libegl1-mesa-dev libgbm-dev \
 libgl1-mesa-dev libgles2-mesa-dev libglx-mesa0 mesa-common-dev mesa-vulkan-drivers \
 mesa-utils libwidevinecdm network-manager
 
+wget https://launchpadlibrarian.net/657101666/chromium-browser-l10n_110.0.5481.4-0ubuntu1~jammy~rkmpp20230130+1_all.deb
+wget https://launchpadlibrarian.net/657101668/chromium-browser_110.0.5481.4-0ubuntu1~jammy~rkmpp20230130+1_arm64.deb
+wget https://launchpadlibrarian.net/657101670/chromium-chromedriver_110.0.5481.4-0ubuntu1~jammy~rkmpp20230130+1_arm64.deb
+wget https://launchpadlibrarian.net/657101671/chromium-codecs-ffmpeg-extra_110.0.5481.4-0ubuntu1~jammy~rkmpp20230130+1_arm64.deb
+wget https://launchpadlibrarian.net/657101673/chromium-codecs-ffmpeg_110.0.5481.4-0ubuntu1~jammy~rkmpp20230130+1_arm64.deb
+sudo dpkg -i *.deb
+sudo apt-mark hold chromium-browser chromium-browser-l10n chromium-chromedriver chromium-codecs-ffmpeg chromium-codecs-ffmpeg-extra
+sudo rm -rf chromium-*.deb
+
 # Remove cloud-init and landscape-common
 apt-get -y purge cloud-init landscape-common
 
