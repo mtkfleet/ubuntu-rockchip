@@ -83,7 +83,7 @@ jobs:
         debootstrap flex libssl-dev bc rsync kmod cpio xz-utils fakeroot parted \
         udev dosfstools uuid-runtime git-lfs device-tree-compiler python2 python3 \
         python-is-python3 fdisk bc debhelper pip swig python3-pyelftools
-        
+        sed -i '243d;244d;245d;246d' ./scripts/build-rootfs.sh
         sudo ./build.sh -b ${{ inputs.board }} $args
         echo "FIRMWARE=${PWD}/images" >> $GITHUB_ENV
         
