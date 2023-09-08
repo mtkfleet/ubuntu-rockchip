@@ -242,9 +242,13 @@ mount -o bind /dev/pts ${chroot_dir}/dev/pts
 
 # Install rkaiq
 cp -r ../packages/rkaiq/camera_engine_rkaiq_rk3588_arm64.deb ${chroot_dir}/tmp
+cp -r ../packages/rkaiq/camera_engine_rkisp-v2.2.0_arm64.deb ${chroot_dir}/tmp
 chroot ${chroot_dir} /bin/bash -c "dpkg -i /tmp/camera_engine_rkaiq_rk3588_arm64.deb"
+chroot ${chroot_dir} /bin/bash -c "dpkg -i /tmp/camera_engine_rkisp-v2.2.0_arm64.deb"
 rm -f ${chroot_dir}/tmp/camera_engine_rkaiq_rk3588_arm64.deb
+rm -f ${chroot_dir}/tmp/camera_engine_rkisp-v2.2.0_arm64.deb
 
+# 
 # Download and update packages
 cat << EOF | chroot ${chroot_dir} /bin/bash
 set -eE 
